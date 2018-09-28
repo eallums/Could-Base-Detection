@@ -1,0 +1,15 @@
+Greetings,
+
+This document, alongside the TSI_LES mock-paper, will direct the user to develop TSI images based on the LES fields. 
+
+The script below will allow for console like submission of the blender job:
+
+cd  "LES_TSI Directory"
+blender Cloudmapperv1.0.blend -b -P Cloud2Blenderv1.0.py
+
+
+Note:
+	-b tells blender to run without GUI ( or --background)
+	-P tells blender to run the python script following it (or --python)
+
+You will, however, need to first modify the Cloud2Blenderv1.0.py to point the program to the proper folder and dump location.
