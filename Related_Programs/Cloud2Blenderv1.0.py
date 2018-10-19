@@ -17,9 +17,9 @@ import os
 '''
 User Defined Options
 '''
-dset = '/data/wrf_microhh/20160611/' # setting the directory containing ql.nc
+dset = '/data/wrf_microhh/20160611/' # setting the directory containing ql.nc, change file path to match date 
 timeindex =  8 # setting index time
-render_landing = '/home/nick/Desktop/Renders/wrf_microhh/20160611_old/'
+render_landing = 'data/wrf_microhh/20160611_old/' - File path for rending location.
 
 '''
 Source
@@ -178,7 +178,7 @@ for l in xcoords:
         camera.location.y = camera_loc[1]
         camera.location.z = camera_loc[2]
         
-        bpy.ops.anim.keyframe_insert(type = 'Location') # Creating keyframe
+       # bpy.ops.anim.keyframe_insert(type = 'Location') # Creating keyframe, commented out to perform run,still debugging why keyframe insert causes runtime error
 
         
         print(frame, camera_loc)
