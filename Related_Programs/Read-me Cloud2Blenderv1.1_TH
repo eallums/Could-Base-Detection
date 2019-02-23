@@ -1,0 +1,25 @@
+"Run blender in background mode with this script: blender --background --python " + __file__ + " -- [options]"
+
+
+parser.add_argument("dataset",
+                    help="Path to the data set")
+parser.add_argument("-d", "--device",
+                    help="GPU or CPU rendering", default = "GPU", choices = ["GPU","CPU"])
+parser.add_argument("-t", "--type",
+                    help="pretty or masked images", default = "masked", choices = ["pretty", "masked"])
+parser.add_argument("-t0", "--starttime",
+                    help="start time step", type=int, default = None)
+parser.add_argument("-t1", "--endtime",
+                    help="end time step", type=int, default = None)
+parser.add_argument("-x", "--xloc",
+                    help="x location (in meters)", type=int)
+
+dset: directory of folder containing ql.nc
+ql.nc: file containing liquid water
+xloc: ex. 6400,9600,16000,12800
+
+example:
+
+ blender --background --python Cloud2Blenderv1.1_TH.py -- blendertest_rico/  -d CPU -t pretty -t0 0 -t1 5 -x 6400 
+
+
